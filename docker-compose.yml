@@ -80,6 +80,7 @@ services:
                     "defaultLevelId": "lvl_iLOVEaLOTlemverse",
 
                     "peer": {
+                        "startServer": false,
                         "server": {
                         "url": "peer.indiemakers.space",
                         "port": 443,
