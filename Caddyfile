@@ -1,0 +1,19 @@
+http://{$FRONTEND_HOST} {
+    redir https://{host}{uri}
+}
+
+http://{$PEER_HOST} {
+    redir https://{host}{uri}
+}
+
+https://{$FRONTEND_HOST} {
+    encode zstd gzip
+    tls admin@lemverse.com
+    reverse_proxy http://{$FRONTEND_SERVICE}:3000
+}
+
+https://{$PEER_HOST} {
+    encode zstd gzip
+    tls admin@lemverse.com
+    reverse_proxy http://{$PEER_SERVICE}:9000
+}
