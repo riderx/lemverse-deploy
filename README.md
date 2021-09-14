@@ -41,7 +41,7 @@ go to FRONTEND_HOST and register your account
 
 ## Upgrade your account to admin
 
-After register open browser console local storage and get your Meteor.userId
+The first account who register become admin 
 
 Set it to `"admins": ["USERID"]` in docker-compose.yml
 
@@ -51,7 +51,7 @@ restart the server with `docker-compose up -d`
 ## Add your first assets
 
 We suggest you to download : https://limezu.itch.io/moderninteriors
-For your own project, you can use for free in private or paid to use publicly
+You can use for free in private or paid to use publicly
 
 ## Build your verse
 

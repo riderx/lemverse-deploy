@@ -32,7 +32,7 @@ services:
                         "lp": {
                             "product": "lemverse",
                             "process": "main",
-                            "admins": ["USERID"],
+                            "admins": [],
                             "production": false,
                             "staging": false,
                             "enableLogClient": false
