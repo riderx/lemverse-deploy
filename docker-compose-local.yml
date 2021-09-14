@@ -21,6 +21,7 @@ services:
             - net_lemverse
         depends_on:
             - mongodb
+            - peer
         ports:
             - '3000:3000'
         volumes:
@@ -105,7 +106,8 @@ services:
         restart: unless-stopped
         networks:
             - net_lemverse
-
+        ports:
+            - 9000:9000
 volumes:
     lemverse:
         driver: local 

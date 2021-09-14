@@ -19,6 +19,7 @@ services:
             - net_lemverse
         depends_on:
             - mongodb
+            - peer
         volumes:
             - lemverse:/var/tmp/lemverse
         environment:
