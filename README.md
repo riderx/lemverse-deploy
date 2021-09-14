@@ -22,7 +22,7 @@ Edit docker-compose-local.yml with your own settings
 
     - meet.serverURL (for conference room, optional)
 
-docker-compose -f docker-compose-local.yml up -d
+`docker-compose -f docker-compose-local.yml up -d`
 
 go to http://localhost:3000 and register your account
 
@@ -34,7 +34,7 @@ Edit docker-compose.yml with your own settings
     - peer.url and PEER_HOST with your domain for peer tot peer visio
     - FRONTEND_HOST with your domain for frontend
 
-docker-compose up -d
+`docker-compose up -d`
 
 go to FRONTEND_HOST and register your account
 

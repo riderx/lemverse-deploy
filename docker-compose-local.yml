@@ -86,7 +86,7 @@ services:
                         "server": {
                         "url": "localhost",
                         "port": 9000,
-                        "path": "/peer",
+                        "path": "/myapp",
                         "credentialDuration": 86400,
                         "secret": "",
                         "config": {

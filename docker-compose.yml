@@ -82,7 +82,7 @@ services:
                         "server": {
                         "url": "peer.indiemakers.space",
                         "port": 443,
-                        "path": "/",
+                        "path": "/myapp",
                         "credentialDuration": 86400,
                         "secret": "",
                         "config": {
