@@ -105,8 +105,8 @@ services:
             - XMPP_RECORDER_DOMAIN
             - TOKEN_AUTH_URL
         networks:
-            meet.jitsi
-            net_lemverse
+            - meet.jitsi
+            - net_lemverse
 
     # XMPP server
     prosody:
