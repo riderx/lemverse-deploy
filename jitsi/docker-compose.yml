@@ -6,9 +6,9 @@ services:
         image: jitsi/web:latest
         restart: ${RESTART_POLICY}
         volumes:
-            - ${CONFIG}/web:/config:Z
-            - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs:Z
-            - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z
+            - jitsi_config:/config:Z
+            - jitsi_crontabs:/var/spool/cron/crontabs:Z
+            - jitsi_transcripts:/usr/share/jitsi-meet/transcripts:Z
         environment:
             - ENABLE_COLIBRI_WEBSOCKET
             - ENABLE_FLOC
@@ -117,8 +117,8 @@ services:
             - '5347'
             - '5280'
         volumes:
-            - ${CONFIG}/prosody/config:/config:Z
-            - ${CONFIG}/prosody/prosody-plugins-custom:/prosody-plugins-custom:Z
+            - prosody_config:/config:Z
+            - prosody_plugins:/prosody-plugins-custom:Z
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -188,7 +188,7 @@ services:
         image: jitsi/jicofo:latest
         restart: ${RESTART_POLICY}
         volumes:
-            - ${CONFIG}/jicofo:/config:Z
+            - jicofo:/config:Z
         environment:
             - AUTH_TYPE
             - BRIDGE_AVG_PARTICIPANT_STRESS
@@ -238,7 +238,7 @@ services:
             - '${JVB_PORT}:${JVB_PORT}/udp'
             - '${JVB_TCP_PORT}:${JVB_TCP_PORT}'
         volumes:
-            - ${CONFIG}/jvb:/config:Z
+            - jvb:/config:Z
         environment:
             - ENABLE_COLIBRI_WEBSOCKET
             - ENABLE_OCTO
@@ -273,9 +273,24 @@ services:
 # Custom network so all services can communicate using a FQDN
 networks:
     meet.jitsi:
+        driver: bridge
+        name: net_lemverse
+    net_lemverse:
+        external: true
+        name: net_lemverse
 
 volumes:
-    jitsi_meet:
+    jitsi_config:
       driver: local
-    net_lemverse:
-      driver: external
+    jitsi_crontabs:
+      driver: local
+    jitsi_transcripts:
+      driver: local
+    jvb:
+      driver: local
+    jicofo:
+      driver: local
+    prosody_config:
+      driver: local
+    prosody_plugins:
+      driver: local
