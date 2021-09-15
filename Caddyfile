@@ -18,8 +18,8 @@ https://{$PEER_HOST} {
     reverse_proxy http://{$PEER_SERVICE}:9000
 }
 
-https://{$JITSI_HOST} {
-    encode zstd gzip
-    tls admin@lemverse.com
-    reverse_proxy http://localhost:8000
-}
+# https://{$JITSI_HOST} {
+#    encode zstd gzip
+#    tls admin@lemverse.com
+#    reverse_proxy http://localhost:8000
+# }
