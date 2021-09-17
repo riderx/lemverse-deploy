@@ -33,7 +33,7 @@ services:
                         "lp": {
                             "product": "lemverse",
                             "process": "main",
-                            "gods": [],
+                            "gods": ["usr_CYAGPigRTMExDMT8F"],
                             "production": false,
                             "staging": false,
                             "enableLogClient": false
