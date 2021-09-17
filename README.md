@@ -41,9 +41,9 @@ go to FRONTEND_HOST and register your account
 
 ## Upgrade your account to admin
 
-The first account who register become admin 
+The first account who register become admin in current levels
 
-Set it to `"admins": ["USERID"]` in docker-compose.yml
+Set it to `"gods": ["USERID"]` in `docker-compose.yml` to become admin everywhere
 
 restart the server with `docker-compose up -d`
 
