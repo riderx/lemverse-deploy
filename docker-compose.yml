@@ -29,6 +29,7 @@ services:
             METEOR_SETTINGS: |
                 {
                     "public": {
+                        "title": "INDIE VERSE",
                         "lp": {
                             "product": "lemverse",
                             "process": "main",
