@@ -71,7 +71,7 @@ services:
                         "characterNames": ["Basic", "Ghost"],
 
                         "skins": {
-                            "guest": "chr_nFfYWTtC8HtPmW8Mf",
+                            "guest": "Ghost.png",
                             "default": "Basic"
                         },
 
