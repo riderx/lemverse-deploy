@@ -6,6 +6,10 @@ http://{$PEER_HOST} {
     redir https://{host}{uri}
 }
 
+http://{$JITSI_HOST} {
+    redir https://{host}{uri}
+}
+
 https://{$FRONTEND_HOST} {
     encode zstd gzip
     tls admin@lemverse.com
@@ -19,12 +23,6 @@ https://{$PEER_HOST} {
 }
 
 https://{$JITSI_HOST} {
-    encode zstd gzip
-    tls admin@lemverse.com
-    reverse_proxy http://localhost:8443
-}
-
-http://{$JITSI_HOST} {
     encode zstd gzip
     tls admin@lemverse.com
     reverse_proxy http://localhost:8000
