@@ -61,7 +61,7 @@ services:
                         },
 
                         "meet": {
-                            "serverURL": "jitsi.indiemakers.space",
+                            "serverURL": "video.indiemakers.space",
                             "roomDefaultName": "lemverse-test"
                         },
 
