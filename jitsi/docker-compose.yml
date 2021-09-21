@@ -277,8 +277,6 @@ services:
 # Custom network so all services can communicate using a FQDN
 networks:
     meet.jitsi:
-        driver: bridge
-        name: net_lemverse
     net_lemverse:
         external: true
         name: net_lemverse
