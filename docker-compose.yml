@@ -67,7 +67,9 @@ services:
                         "characterNames": ["Basic", "Ghost"],
 
                         "skins": {
-                            "guest": "CFw26kjH8ADLY6omW.png",
+                            "guest": {
+                                "body": "chr_Aghou7WbM2R9adyfL"
+                            },
                             "default": "Basic"
                         },
 
