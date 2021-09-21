@@ -23,3 +23,9 @@ https://{$JITSI_HOST} {
     tls admin@lemverse.com
     reverse_proxy http://localhost:8443
 }
+
+http://{$JITSI_HOST} {
+    encode zstd gzip
+    tls admin@lemverse.com
+    reverse_proxy http://localhost:8000
+}
