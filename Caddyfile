@@ -13,5 +13,5 @@ https://{$PEER_HOST} {
 https://{$JITSI_HOST} {
     encode zstd gzip
     tls admin@lemverse.com
-    reverse_proxy http://web:8000
+    reverse_proxy http://web:80
 }
