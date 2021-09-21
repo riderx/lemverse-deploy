@@ -108,6 +108,7 @@ services:
             - net_lemverse
     caddy:
         image: caddy/caddy:alpine
+        restart: unless-stopped
         container_name: caddy
         environment:
             FRONTEND_HOST: app.indiemakers.space
