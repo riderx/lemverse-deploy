@@ -3,7 +3,7 @@ version: '3'
 services:
     # Frontend
     web:
-        name: web
+        container_name: web
         image: jitsi/web:latest
         restart: ${RESTART_POLICY}
         volumes:
@@ -111,7 +111,7 @@ services:
 
     # XMPP server
     prosody:
-        name: prosody
+        container_name: prosody
         image: jitsi/prosody:latest
         restart: ${RESTART_POLICY}
         expose:
@@ -187,7 +187,7 @@ services:
 
     # Focus component
     jicofo:
-        name: jicofo
+        container_name: jicofo
         image: jitsi/jicofo:latest
         restart: ${RESTART_POLICY}
         volumes:
@@ -235,7 +235,7 @@ services:
 
     # Video bridge
     jvb:
-        name: jvb
+        container_name: jvb
         image: jitsi/jvb:latest
         restart: ${RESTART_POLICY}
         ports:
