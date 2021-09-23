@@ -51,7 +51,8 @@ services:
                             "answerMaxAttempt": 5,
                             "answerDelayBetweenAttempt": 750,
                             "avatars": [""],
-                            "callDelay": 250
+                            "callDelay": 250,
+                            "delayBeforeClosingCall": 1000
                         },
 
                         "meet": {
@@ -77,21 +78,28 @@ services:
                     },
 
                     "defaultLevelId": "lvl_iLOVEaLOTlemverse",
-
                     "peer": {
-                        "startServer": false,
-                        "server": {
-                        "url": "peer.indiemakers.space",
-                        "port": 443,
                         "path": "/myapp",
-                        "credentialDuration": 86400,
-                        "secret": "",
-                        "config": {
-                            "iceServers": [{ 
-                            "urls": "stun:stun.l.google.com:19302"
-                            }],
-                            "sdpSemantics": "unified-plan"
-                        }
+                        "client": {
+                            "url": "peer.indiemakers.space",
+                            "port": 443,
+                            "credentialDuration": 86400,
+                            "secret": "",
+                            "config": { 
+                                "iceServers": [{ 
+                                "urls": "stun:stun.l.google.com:19302"
+                                }],
+                                "iceTransportPolicy" : "all",
+                                "sdpSemantics": "unified-plan"
+                            }
+                        },
+                        "server": {
+                            "start": false,
+                            "port": 443,
+                            "key": "peerjs",
+                            "alive_timeout": 60000,
+                            "expire_timeout": 5000,
+                            "allow_discovery": false
                         }
                     }
                 }
