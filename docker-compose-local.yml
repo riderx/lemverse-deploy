@@ -14,7 +14,7 @@ services:
         networks:
             - net_lemverse
     lemverse:
-        image: riderx/lemverse:latest
+        image: riderx/lemverse:dev
         container_name: lemverse
         restart: unless-stopped
         networks:
@@ -23,87 +23,13 @@ services:
             - mongodb
             - peer
         ports:
-            - '3000:3000'
+            - '9001:9000'
         volumes:
             - lemverse:/var/tmp/lemverse
+            - /Users/martindonadieu/Documents/Projects.nosync/lemverse/app:/opt/src # mount local dir to allow hot reload
         environment:
             ROOT_URL: ${APP_ROOT_URL:-http://localhost}
             MONGO_URL: mongodb://mongodb:27017/meteor
-            PORT: 3000
-            METEOR_SETTINGS: |
-                {
-                    "public": {
-                        "lp": {
-                            "product": "lemverse",
-                            "process": "main",
-                            "admins": [],
-                            "production": false,
-                            "staging": false,
-                            "enableLogClient": false
-                        },
-
-                        "debug": false,
-
-                        "defaultReaction": "❤️",
-
-                        "zoom": 1,
-
-                        "peer": {
-                            "answerMaxAttempt": 5,
-                            "answerDelayBetweenAttempt": 750,
-                            "avatars": [""],
-                            "callDelay": 250,
-                            "delayBeforeClosingCall": 1000
-                        },
-
-                        "meet": {
-                            "serverURL": "jitsi.indiemakers.space",
-                            "roomDefaultName": "lemverse-test"
-                        },
-
-                        "character": {
-                            "walkSpeed": 180,
-                            "runSpeed": 720
-                        },
-
-                        "characterNames": ["Basic", "Ghost"],
-
-                        "skins": {
-                            "guest": "Ghost",
-                            "default": "Basic"
-                        },
-
-                        "templateLevelId": "lvl_iLOVEaLOTlemverse"
-                    },
-
-                    "defaultLevelId": "lvl_iLOVEaLOTlemverse",
-
-                    "peer": {
-                        "path": "/myapp",
-                        "client": {
-                            "url": "localhost",
-                            "port": 9000,
-                            "credentialDuration": 86400,
-                            "secret": "",
-                            "config": { 
-                                "iceServers": [{ 
-                                "urls": "stun:stun.l.google.com:19302"
-                                }],
-                                "iceTransportPolicy" : "all",
-                                "sdpSemantics": "unified-plan"
-                            }
-                        },
-                        "server": {
-                            "start": false,
-                            "port": 443,
-                            "key": "peerjs",
-                            "alive_timeout": 60000,
-                            "expire_timeout": 5000,
-                            "allow_discovery": false
-                        }
-                    }
-                }
-
     peer:
         image: peerjs/peerjs-server
         container_name: peer
