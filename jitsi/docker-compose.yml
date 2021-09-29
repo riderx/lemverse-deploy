@@ -302,18 +302,17 @@ services:
             - JIBRI_LOGS_DIR
             - DISPLAY=:0
             - TZ
-            ENABLE_JIBRI_HTTP_API_PORT: 1
-            JIBRI_HTTP_API_EXTERNAL_PORT: 2222
-            JIBRI_HTTP_API_INTERNAL_PORT: 3333
-            JIBRI_USAGE_TIMEOUT: 0
-            XMPP_TRUST_ALL_CERTS: "true"
-            CHROMIUM_FLAGS: "--use-fake-ui-for-media-stream,--start-maximized,--kiosk,--enabled,--disable-infobars,--autoplay-policy=no-user-gesture-required"
-            ENABLE_STATS_D: "true"
-            JIBRI_FFMPEG_RESOLUTION: "1280x720"
-            JIBRI_FFMPEG_AUDIO_SOURCE: "pulse"
-            JIBRI_FFMPEG_AUDIO_DEVICE: "default"
-            PUBLIC_URL: ""
-            XORG_DUMMY_VIDEO_RESOLUTION: "1280 720"
+            - ENABLE_JIBRI_HTTP_API_PORT
+            - JIBRI_HTTP_API_EXTERNAL_PORT
+            - JIBRI_HTTP_API_INTERNAL_PORT
+            - JIBRI_USAGE_TIMEOUT
+            - XMPP_TRUST_ALL_CERTS
+            - CHROMIUM_FLAGS
+            - ENABLE_STATS_D
+            - JIBRI_FFMPEG_RESOLUTION
+            - JIBRI_FFMPEG_AUDIO_SOURCE
+            - JIBRI_FFMPEG_AUDIO_DEVICE
+            - XORG_DUMMY_VIDEO_RESOLUTION
         depends_on:
             - jicofo
         networks:
