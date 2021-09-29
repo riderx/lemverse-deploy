@@ -6,6 +6,8 @@ Run `./gen-passwords.sh` to create mendatory passwords
 
 Set your domain in `.env` at PUBLIC_URL
 
+Do `mkdir -p ~/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody/config,prosody/prosody-plugins-custom,jicofo,jvb,jigasi,jibri}` to create all directories
+
 Set your domain in `../docker-compose.yml` at JITSI_HOST var
 Set your domain in `../docker-compose.yml` at serverURL
 
