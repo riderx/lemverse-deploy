@@ -275,7 +275,7 @@ services:
                     - jvb.meet.jitsi
     jibri:
         container_name: jibri
-        image: prayagsingh/jibri-pulseaudio:latest
+        image: fundocker/jibri-pulseaudio:latest
         restart: ${RESTART_POLICY}
         volumes:
             - ./jibri:/config:Z
