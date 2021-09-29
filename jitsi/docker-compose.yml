@@ -275,7 +275,7 @@ services:
                     - jvb.meet.jitsi
     jibri:
         container_name: jibri
-        image: fundocker/jibri-pulseaudio:latest
+        image: jitsi/jibri:latest
         restart: ${RESTART_POLICY}
         volumes:
             - ./jibri:/config:Z
@@ -283,8 +283,8 @@ services:
         cap_add:
             - SYS_ADMIN
             - NET_BIND_SERVICE
-        # devices:
-            # - /dev/snd:/dev/snd
+        devices:
+            - /dev/snd:/dev/snd
         environment:
             - PUBLIC_URL
             - XMPP_AUTH_DOMAIN
