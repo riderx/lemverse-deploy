@@ -275,7 +275,7 @@ services:
                     - jvb.meet.jitsi
     jibri:
         container_name: jibri
-        image: kpeiruza/jibri:pulse
+        image: prayagsingh/jibri-pulseaudio:latest
         restart: ${RESTART_POLICY}
         volumes:
             - ./jibri:/config:Z
@@ -283,8 +283,6 @@ services:
         cap_add:
             - SYS_ADMIN
             - NET_BIND_SERVICE
-        devices:
-            - /dev/snd:/dev/snd
         environment:
             - PUBLIC_URL
             - XMPP_AUTH_DOMAIN
@@ -304,6 +302,18 @@ services:
             - JIBRI_LOGS_DIR
             - DISPLAY=:0
             - TZ
+            ENABLE_JIBRI_HTTP_API_PORT: 1
+            JIBRI_HTTP_API_EXTERNAL_PORT: 2222
+            JIBRI_HTTP_API_INTERNAL_PORT: 3333
+            JIBRI_USAGE_TIMEOUT: 0
+            XMPP_TRUST_ALL_CERTS: "true"
+            CHROMIUM_FLAGS: "--use-fake-ui-for-media-stream,--start-maximized,--kiosk,--enabled,--disable-infobars,--autoplay-policy=no-user-gesture-required"
+            ENABLE_STATS_D: "true"
+            JIBRI_FFMPEG_RESOLUTION: "1280x720"
+            JIBRI_FFMPEG_AUDIO_SOURCE: "pulse"
+            JIBRI_FFMPEG_AUDIO_DEVICE: "default"
+            PUBLIC_URL: ""
+            XORG_DUMMY_VIDEO_RESOLUTION: "1280 720"
         depends_on:
             - jicofo
         networks:
