@@ -1,4 +1,4 @@
-git resert --hard
+git reset --hard
 git pull
 cd jitsi
 bash gen_password.sh
