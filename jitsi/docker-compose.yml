@@ -278,7 +278,7 @@ services:
         image: prayagsingh/jibri-pulseaudio:latest
         restart: ${RESTART_POLICY}
         volumes:
-            - ./jibri:/config:Z
+            - ${CONFIG}/jibri:/config:Z
             - /dev/shm:/dev/shm
         cap_add:
             - SYS_ADMIN
