@@ -1,6 +1,6 @@
 git reset --hard
 git pull
 cd jitsi
-bash gen_password.sh
+bash gen_passwords.sh
 docker-compose up -d
 cd ..
