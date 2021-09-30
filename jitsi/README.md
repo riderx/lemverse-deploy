@@ -2,7 +2,7 @@
 
 inspired from : https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker
 
-Run `./gen-passwords.sh` to create mendatory passwords
+Run `bash gen_env.sh` to create env variables
 
 Set your domain in `.env` at PUBLIC_URL
 

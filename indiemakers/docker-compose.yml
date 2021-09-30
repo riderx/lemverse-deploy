@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    # Frontend
+    indiemakers:
+        container_name: indiemakers
+        image: riderx/indiemakers:latest
+        restart: ${RESTART_POLICY}
+        environment:
+            - BOT_TOKEN
+            - FIREBASE_DATABASE
+            - FIREBASE_ADMIN_KEY
+            - CLIENT_PUBLIC_KEY
+            - IMAGEKIT_KEY
+            - GOOGLE_SERVICE_ACCOUNT
+            - DEPLOY_API_ONLY
+
+networks:
+    net_lemverse:
+        external: true
+        name: net_lemverse

@@ -10,6 +10,7 @@ JIGASI_XMPP_PASSWORD=$(generatePassword)
 JIBRI_RECORDER_PASSWORD=$(generatePassword)
 JIBRI_XMPP_PASSWORD=$(generatePassword)
 
+cp .env.exemple .env
 sed -i.bak \
     -e "s#JICOFO_AUTH_PASSWORD=.*#JICOFO_AUTH_PASSWORD=${JICOFO_AUTH_PASSWORD}#g" \
     -e "s#JVB_AUTH_PASSWORD=.*#JVB_AUTH_PASSWORD=${JVB_AUTH_PASSWORD}#g" \
