@@ -337,6 +337,10 @@ services:
             - XMPP_RECORDER_DOMAIN
             - XMPP_SERVER
             - XMPP_TRUST_ALL_CERTS
+        depends_on:
+            - jicofo
+        networks:
+            meet.jitsi:
     # jibri:
         # container_name: jibri
         # image: prayagsingh/jibri-pulseaudio:latest
