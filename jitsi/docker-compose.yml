@@ -249,6 +249,7 @@ services:
             - XMPP_INTERNAL_MUC_DOMAIN
             - XMPP_MUC_DOMAIN
             - XMPP_SERVER
+            - DISPLAY=":0"
         depends_on:
             - prosody
         networks:
