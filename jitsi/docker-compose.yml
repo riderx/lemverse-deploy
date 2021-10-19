@@ -305,6 +305,8 @@ services:
         volumes:
             - ${CONFIG}/jibri:/config:Z
             - /dev/shm:/dev/shm
+        extra_hosts:
+            - "video.indiemakers.space:host-gateway"
         cap_add:
             - SYS_ADMIN
             - NET_BIND_SERVICE
@@ -329,7 +331,7 @@ services:
             - JIBRI_FINALIZE_RECORDING_SCRIPT_PATH
             - JIBRI_STRIP_DOMAIN_JID
             - JIBRI_LOGS_DIR
-            - PUBLIC_URL
+            - PUBLIC_URL=
             - TZ
             - XMPP_AUTH_DOMAIN
             - XMPP_DOMAIN
