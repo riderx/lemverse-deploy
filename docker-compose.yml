@@ -116,12 +116,9 @@ services:
         container_name: caddy
         environment:
             FRONTEND_HOST: app.indiemakers.space
-            INDIEMAKERS_HOST: bot.indiemakers.space
             JITSI_HOST: video.indiemakers.space
-            JIBRI_HOST: recorder.indiemakers.space
             PEER_HOST: peer.indiemakers.space
             JITSI_SERVICE: web
-            JIBRI_SERVICE: jibri
             INDIEMAKERS_SERVICE: indiemakers
             FRONTEND_SERVICE: lemverse
             PEER_SERVICE: peer

@@ -16,12 +16,6 @@ https://{$JITSI_HOST} {
     reverse_proxy http://{$JITSI_SERVICE}:80
 }
 
-https://{$JIBRI_HOST} {
-    encode zstd gzip
-    tls admin@indiemakers.space
-    reverse_proxy http://{$JIBRI_SERVICE}:80
-}
-
 https://{$INDIEMAKERS_HOST} {
     encode zstd gzip
     tls admin@indiemakers.space
