@@ -306,7 +306,7 @@ services:
             - ${CONFIG}/jibri:/config:Z
             - /dev/shm:/dev/shm
         extra_hosts:
-            - "video.indiemakers.space:host-gateway"
+            - "video.indiemakers.space:206.189.29.12"
         cap_add:
             - SYS_ADMIN
             - NET_BIND_SERVICE
