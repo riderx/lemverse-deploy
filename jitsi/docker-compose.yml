@@ -308,8 +308,8 @@ services:
         cap_add:
             - SYS_ADMIN
             - NET_BIND_SERVICE
-        extra_hosts:
-            - "video.indiemakers.space:206.189.29.12"
+        # extra_hosts:
+            # - "video.indiemakers.space:206.189.29.12"
         environment:
             - PUBLIC_URL
             - XMPP_AUTH_DOMAIN
