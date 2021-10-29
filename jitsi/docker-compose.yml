@@ -297,7 +297,7 @@ services:
                     - jvb.meet.jitsi
     jibri:
         container_name: jibri
-        image: prayagsingh/jibri-pulseaudio:latest
+        image: prayagsingh/jibri-pulseaudio:1.4.0
         restart: ${RESTART_POLICY}
         volumes:
             - ${CONFIG}/jibri:/config:Z
