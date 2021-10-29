@@ -5,7 +5,7 @@ services:
     indiemakers:
         container_name: indiemakers
         image: riderx/indiemakers:latest
-        restart: ${RESTART_POLICY}
+        restart: unless-stopped
         environment:
             - PORT=80
             - BOT_TOKEN
@@ -15,6 +15,8 @@ services:
             - IMAGEKIT_KEY
             - GOOGLE_SERVICE_ACCOUNT
             - DEPLOY_API_ONLY
+        networks:
+            - net_lemverse
 
 networks:
     net_lemverse:
