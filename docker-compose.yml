@@ -115,6 +115,7 @@ services:
         restart: unless-stopped
         container_name: caddy
         environment:
+            INDIEMAKERS_HOST: bot.indiemakers.space
             FRONTEND_HOST: app.indiemakers.space
             JITSI_HOST: video.indiemakers.space
             PEER_HOST: peer.indiemakers.space
