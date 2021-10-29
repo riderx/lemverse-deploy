@@ -6,9 +6,8 @@ services:
         container_name: indiemakers
         image: riderx/indiemakers:latest
         restart: ${RESTART_POLICY}
-        ports:
-            - '80:3000'
         environment:
+            - PORT=80
             - BOT_TOKEN
             - FIREBASE_DATABASE
             - FIREBASE_ADMIN_KEY
