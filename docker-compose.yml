@@ -31,9 +31,8 @@ services:
             METEOR_SETTINGS: |
                 {
                     "public": {
-                        "title": "INDIE VERSE",
                         "lp": {
-                            "product": "lemverse",
+                            "product": "INDIE_VERSE",
                             "website": "https://app.indiemakers.sapce",
                             "process": "main",
                             "gods": ["usr_CYAGPigRTMExDMT8F"],
