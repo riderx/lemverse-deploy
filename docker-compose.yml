@@ -34,6 +34,7 @@ services:
                         "title": "INDIE VERSE",
                         "lp": {
                             "product": "lemverse",
+                            "website": "https://app.indiemakers.sapce",
                             "process": "main",
                             "gods": ["usr_CYAGPigRTMExDMT8F"],
                             "production": false,
