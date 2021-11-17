@@ -62,7 +62,9 @@ services:
 
                         "character": {
                             "walkSpeed": 180,
-                            "runSpeed": 720
+                            "runSpeed": 720,
+                            "sensorNearDistance": 75,
+                            "sensorFarDistance": 85
                         },
 
                         "characterNames": ["Basic", "Ghost"],
