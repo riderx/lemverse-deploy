@@ -15,6 +15,7 @@ services:
             - IMAGEKIT_KEY
             - GOOGLE_SERVICE_ACCOUNT
             - DEPLOY_API_ONLY
+            - TWITTER_TOKEN
         networks:
             - net_lemverse
 
